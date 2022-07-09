@@ -1,0 +1,59 @@
+<app-logout></app-logout>
+<app-skills></app-skills>
+<app-vacancy></app-vacancy>
+
+<div class="container">
+    <div class="view-window">
+
+        <div class="swipe-left">
+
+            <!--<i class="fa-solid fa-angle-left fa-4x"></i>-->
+            <a (click)="swipe('left')">&#11013;</a>
+
+
+        </div>
+
+
+        <div class="slot-view">
+            
+            <div class="slot" *ngIf="peopleList.length>=0">
+                <fieldset>
+                    <legend>{{currentCard.type}}</legend>
+    
+                    <label>
+                        State: 
+                        <p>{{currentCard.state}}</p>
+                    </label>
+                    <label>
+                        Skills: 
+                        <p>{{currentCard.skills}}</p>
+                    </label>
+                    <label>
+                        Description: 
+                        <p>{{currentCard.description}}</p>
+                    </label>
+                </fieldset>
+                
+            </div>
+
+            
+        </div>
+
+        <div class="swipe-right">
+
+            <!--<i class="fa-solid fa-angle-right fa-4x"></i>-->
+            <a (click)="swipe('right')">&#10145;</a>
+
+
+        </div>
+        
+
+
+        
+
+    </div>
+
+   
+    
+
+</div>

@@ -1,0 +1,71 @@
+<app-login></app-login>
+<section class="main-window">
+    <div class="container">
+        <div class="signup-select">
+            <div class="select-title">
+                <h3>
+                    Are you a...
+                </h3>
+
+            </div>
+            <div class="signup-select-radio">
+                <label>
+                    <input class="select-candidate" type="radio" name="company-or-person" value="candidate" checked="true" [(ngModel)]="radioCandidate" #isCandidate="ngModel" (change)="onItemChange($event)">
+                    <div>Candidate</div>
+            
+                </label>
+                <label>
+                    <input class="select-company" type="radio" name="company-or-person" value="company" (change)="onItemChange($event)">
+                    <div> Company</div>
+                </label>
+
+            </div>
+            
+
+        </div>
+
+        <div class="signup-window">
+
+            <div class="container" >
+                <form #formCadastro="ngForm">
+                    <input data-type="login" class="person" type="email" name="login" placeholder="Login" [(ngModel)]="person.email" required>
+                    <input data-type="password"class="person" type="password" name="password" placeholder="Password" [(ngModel)]="person.password" #pass="ngModel" minlength="8" required>
+                    <input data-type="confirm-password"class="person" type="password" name="confirm-password" placeholder="confirm password" [(ngModel)]="confirmPassword" #confirmPass="ngModel" required>
+                    <div *ngIf="confirmPass.touched || confirmPass.dirty">
+                        <span id="matching-message" [hidden]="pass.value.length>=8"> Password length must be above 8 characteres</span>
+                        <span id="matching-message2" [hidden]="confirmPass.value == pass.value"> Password does not match</span>
+                    </div>
+  
+            
+                    <div class="candidate-section" *ngIf="isCandidate.value == 'candidate'">
+                        <input data-type="name" class="person candidate" type="text" name="name" [(ngModel)]="person.name" placeholder="name" >
+                        <input data-type="surname" class="person candidate" type="text" name="surname" [(ngModel)]="person.surName" placeholder="surname" >
+                        <input data-type="dob"  class="person candidate"type="text" name="dob" placeholder="Birthdate" [(ngModel)]="birthdate" onfocus="(this.type='date')" onblur="(this.type='text')" >
+                        <input data-type="cpf"  class="person candidate"type="text" name="cpf" placeholder="cpf" [(ngModel)]="person.cpf" >
+                    </div>
+
+                    <div class="company-section" *ngIf="isCandidate.value == 'company'">
+                        <input data-type="companyName" class="person company" type="text" name="company-name" placeholder="Company name" [(ngModel)]="person.companyName">
+                        <input data-type="cnpj"  class="person company" type="text" name="cnpj" placeholder="cnpj" [(ngModel)]="person.cnpj">
+                    </div>
+
+
+                    <input data-type="cep" type="text" name="cep" placeholder="CEP" [(ngModel)]="person.cep" required>
+
+                    <input data-type="state" type="text" name="state" placeholder="state" [(ngModel)]="person.state">
+                    <input data-type="country" class="person company" type="text" name="country" placeholder="Country" [(ngModel)]="person.country">
+
+                    <textarea class="description" maxlength="300" name="description" [(ngModel)]="person.description"></textarea>
+
+                    <button class="signup" (click)="cadastrar()">Sign Up</button>
+                </form>
+
+            </div>
+
+        </div>
+        
+    </div>
+
+</section>
+
+

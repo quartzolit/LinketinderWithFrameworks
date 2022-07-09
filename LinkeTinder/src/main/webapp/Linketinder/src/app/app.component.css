@@ -1,0 +1,14 @@
+footer{
+    display: flex;
+    height: 28px;
+    background-color: #001111;
+    color: #DDD;
+    padding-left: 20px;
+    font-size: 22px;
+    margin-top: 47px;
+    
+}
+
+footer h6{
+    margin: 5px;
+}

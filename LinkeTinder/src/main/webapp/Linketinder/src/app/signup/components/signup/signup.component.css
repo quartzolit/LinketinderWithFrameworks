@@ -1,0 +1,80 @@
+section{
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+    margin-left: 30px;
+}
+
+
+section h3{
+    color: #001111;
+    font-size: 30px;
+    margin: 0px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.select-title{
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+.signup-select{
+    margin-bottom: 30px;
+}
+
+.signup-select-radio{
+    display: flex;
+}
+
+.signup-select-radio label{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+
+}
+
+.signup-select-radio label div{
+    margin-left: 3px;
+}
+
+.signup-window form{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #DDD;
+    border: 1px solid #FFF;
+    border-radius: 10px;
+    margin-bottom: 9px;
+}
+
+.signup-window input{
+    margin: 0px 2px;
+    margin-bottom: 10px;
+}
+
+.signup-window textarea{
+    height: 100px;
+    resize: none;
+    margin-bottom: 8px;
+}
+
+.signup-window button{
+    background-color: #001111;
+    color: #DDD;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.signup-window button:hover{
+    background-color: #FFF;
+    color: #001111;
+}
+
+#matching-message, #matching-message2{
+    color: #F00;
+}
+

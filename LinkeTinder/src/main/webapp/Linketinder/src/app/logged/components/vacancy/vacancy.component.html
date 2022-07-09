@@ -1,0 +1,77 @@
+<div class="managevacancy" *ngIf="loggedPerson.type=='company'">
+    <div class="container">
+        <fieldset>
+            <legend>Vacancies</legend>
+            <div class="vacancy-field">
+                <div>
+                    <fieldset>
+                        <legend>Your Vacancies</legend>
+
+                        <div class="vacancy-field">
+                            <div class="vacancy-table">
+                                <table >
+                                    <thead>
+                                        <tr>
+                                            <th> Title </th>
+                                            <th> Desired Skills </th>
+                                            <th> Delete Vacancy </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let vacancy of loggedPerson.vacancy">
+                                            <td><input type="text" [value]="vacancy.title" readonly></td>
+                                            <td><select name="vacancy-skills" id="Vacancy-skills-select">
+                                                <option *ngFor="let skill of vacancy.skills" [value]="skill">{{skill}}</option>
+                                            </select></td>
+                                            <td>
+                                                <button class="delete-vacancy" (click)="deleteVacancy(vacancy.title)">X</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    
+    
+                                </table>
+                            </div>                        
+                                                  
+                            <div class="add-vacancy">
+                
+                                <button  class="add-button" (click)="showVacancyInput()">Insert New Vacancy</button>
+                            </div>
+                            <div [hidden]="addVacancy==false" class="add-inputs">
+                                <label>
+                                    Title:
+                                    <input type="text" name="vacancy-title" minlength="5" maxlength="30" [(ngModel)]="vacancyTitle" required>
+                                </label>
+
+                                <label>
+                                    Skills: 
+                                    <select name="vacancySkills" [(ngModel)]="vacancySkills" multiple>
+                                        <option value="JAVA">Java</option>
+                                        <option value="GROOVY">Groovy</option>
+                                        <option value="HTML">HTML</option>
+                                        <option value="CSS">CSS</option>
+                                        <option value="JAVASCRIPT">Javascript</option>
+                                        <option value="FRONTEND">FrontEnd</option>
+                                        <option value="BACKEND">BackEnd</option>
+                                        <option value="GITHUB">github</option>
+                                        <option value="HIBERNATE">Hibernate</option>
+                                    </select>
+                                </label>
+                                
+                                
+                                <button (click)="addNewVacancy()">Confirm</button>
+
+                            </div>
+                        </div>
+
+                        
+                        
+                    </fieldset>
+
+                </div>
+            </div>
+                        
+
+        </fieldset>
+
+    </div>

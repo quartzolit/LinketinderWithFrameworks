@@ -1,0 +1,5 @@
+export * from './signup.module'
+export * from './signup-routing.module'
+export * from './components'
+export * from './services'
+export * from './signup.module'
