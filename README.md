@@ -1,6 +1,6 @@
 # LinketinderWithFrameworks
 
-It's a new version of (LinkeTinder2)[https://github.com/quartzolit/ZG-LinkeTinder2]
+It's a new version of [LinkeTinder2](https://github.com/quartzolit/ZG-LinkeTinder2)
 
 ## Front-END
 
