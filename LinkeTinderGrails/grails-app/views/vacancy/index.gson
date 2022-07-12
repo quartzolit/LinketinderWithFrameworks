@@ -1,0 +1,8 @@
+import linketinder.Vacancy
+
+model {
+	Iterable<Vacancy> vacancyList
+}
+
+json tmpl.vacancy(vacancyList ?: [])
+

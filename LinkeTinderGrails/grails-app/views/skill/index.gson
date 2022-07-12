@@ -1,0 +1,8 @@
+import linketinder.Skill
+
+model {
+	Iterable<Skill> skillList
+}
+
+json tmpl.skill(skillList ?: [])
+

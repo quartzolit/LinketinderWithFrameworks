@@ -1,0 +1,74 @@
+header{
+    width: 100%;
+    background-color: #001111;
+    border-bottom: 2px solid #DDD;
+    
+}
+
+header .container{
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+header .head-title{
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+header h2{
+    color: #DDD;
+}
+
+header form{
+    color: #DDD;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header label{
+    display: flex;
+    
+}
+
+header label input{
+    width: 15ch;
+    margin-left: 5px;
+    margin-right: 8px;
+}
+
+header label a{
+    margin-right: 20px;
+}
+
+
+.view-page{
+    display: flex;
+    flex-direction: row;
+}
+
+.view-page label div {
+    display: flex;
+    color: #ddd;
+}
+
+.view-page label div a{
+    margin-left: 5px;
+}
+.logout-button{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.logout-button:hover{
+    cursor:pointer;
+}
+
+.logout-button a{
+    background-color: #DDD;
+    color: #001111;
+    text-decoration: none;
+    padding: 3px;
+    border-radius: 5px;
+}
+

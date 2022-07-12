@@ -1,0 +1,49 @@
+<div class="manageskills">
+    <div class="container">
+        <fieldset>
+            <legend>Managing Skills</legend>
+            <div class="add-skills">
+                <div>
+                    <fieldset>
+                        <legend>Adding Skills</legend>
+                        <select name="adding" id="add-skills-select" [(ngModel)]="addSkill">
+                            <option value="select-one" selected>Select One</option>
+                            <option value="JAVA">Java</option>
+                            <option value="GROOVY">Groovy</option>
+                            <option value="HTML">HTML</option>
+                            <option value="CSS">CSS</option>
+                            <option value="JAVASCRIPT">Javascript</option>
+                            <option value="FRONTEND">FrontEnd</option>
+                            <option value="BACKEND">BackEnd</option>
+                            <option value="GITHUB">github</option>
+                            <option value="HIBERNATE">Hibernate</option>
+                        </select>
+                        <div class="add-button">
+                            <!--<fa-icon [icon]="fcp"></fa-icon>-->
+                            <button  class="add-button" (click)="addSkillOnList()">+</button>
+                        </div>
+                    </fieldset>
+
+                </div>
+            </div>
+            <div class="remove-skills">
+                <fieldset>
+                    <legend>Your Skills</legend>
+                    <select name="your-skills" id="your-skills-select" [(ngModel)]="removeSkill" #skills="ngModel" >
+                        <option value="select-one" selected>select one</option>   
+                        <option *ngFor="let skill of loggedPerson.skills" [value]="skill">{{skill}}</option>
+                       
+                    </select>
+
+                    <div class="remove-button">
+                        <button class="remove-button" (click)="removeSkillOnList()">-</button>
+                        <!--<fa-icon icon="{{fcm}}"></fa-icon>-->
+                    </div>
+                </fieldset>
+
+            </div>
+            
+
+        </fieldset>
+
+    </div>

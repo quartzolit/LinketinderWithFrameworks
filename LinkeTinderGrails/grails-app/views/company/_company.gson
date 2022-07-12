@@ -1,0 +1,7 @@
+import linketinder.Company
+
+model {
+	Company company
+}
+
+json g.render(company, [resolveTemplate: false])

@@ -1,0 +1,7 @@
+import linketinder.Skill
+
+model {
+	Skill skill
+}
+
+json g.render(skill, [resolveTemplate: false])

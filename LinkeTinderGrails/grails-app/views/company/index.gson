@@ -1,0 +1,8 @@
+import linketinder.Company
+
+model {
+	Iterable<Company> companyList
+}
+
+json tmpl.company(companyList ?: [])
+

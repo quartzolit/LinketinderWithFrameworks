@@ -1,0 +1,24 @@
+<header>
+    <div class="container">
+        <div class="head-title">
+            <h2>ZG - Linketinder</h2>
+        </div>
+
+        <div class="login-page">
+            <form>
+                <label>
+                    <div>e-mail: </div>
+                    <input data-type="email-login" type="text" name="email" [(ngModel)]="email" required >
+                </label>
+                <label>
+                    <div>Password: </div>
+                    <input data-type="password-login" type="password" name="password" [(ngModel)]="password" required >
+                </label>
+                <div class="login-button">
+                    <a (click)="tryToLogin()" >Login</a>  
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</header>
