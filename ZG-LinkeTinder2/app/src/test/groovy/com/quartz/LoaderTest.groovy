@@ -27,7 +27,7 @@ class LoaderTest {
     void testLoadCandidates() {
         List<Candidate> candidates;
 
-        candidates= Loader.loadCandidates()
+        candidates = Loader.loadCandidates()
 
         int expectedSize = 5
 

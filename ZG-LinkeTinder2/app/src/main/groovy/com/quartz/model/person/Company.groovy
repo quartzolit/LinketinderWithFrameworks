@@ -8,7 +8,7 @@ class Company extends Person {
     List<Vacancy> vacancy;
 
     void createVacancy(String name, Skills skills) {
-        this.vacancy<< new Vacancy(name: name, desiredSkills: skills);
+        this.vacancy << new Vacancy(name: name, desiredSkills: skills);
 
 
     }

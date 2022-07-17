@@ -1,4 +1,4 @@
-interface Person{
+interface Person {
     type: string;
     login: string;
     password: string;
@@ -16,4 +16,4 @@ interface Person{
     disapproval?: Person[];
 }
 
-export { Person }   
+export {Person}

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.quartz.TypeOfClassTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-07-07T10:44:49" hostname="ARTHUR" time="0.192">
-  <properties/>
-  <testcase name="children()" classname="com.quartz.TypeOfClassTest" time="0.192"/>
-  <system-out><![CDATA[Candidate
+<testsuite name="com.quartz.TypeOfClassTest" tests="1" skipped="0" failures="0" errors="0"
+           timestamp="2022-07-07T10:44:49" hostname="ARTHUR" time="0.192">
+    <properties/>
+    <testcase name="children()" classname="com.quartz.TypeOfClassTest" time="0.192"/>
+    <system-out><![CDATA[Candidate
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+    <system-err><![CDATA[]]></system-err>
 </testsuite>

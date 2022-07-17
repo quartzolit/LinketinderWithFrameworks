@@ -8,7 +8,7 @@ export class Person{
     name?: string;
     surName?: string;
     //age?: number;
-    dob?: Date;
+    birthdate?: Date;
     cpf?: string;
     companyName?: string;
     cnpj?: string;

@@ -14,7 +14,7 @@ class PersonTestGroovy {
 
         EnumSkills expectedResult = EnumSkills.JAVA;
 
-        person.skills.addSkillToList(EnumSkills.JAVA );
+        person.skills.addSkillToList(EnumSkills.JAVA);
 
         Assertions.assertTrue(person.skills.getSkills().contains(expectedResult))
 
@@ -33,12 +33,12 @@ class PersonTestGroovy {
 
         person.skills.removeSkillToList(EnumSkills.HIBERNATE);
 
-        Assertions.assertTrue(person.skills.getSkills().contains(expectedResult) && person.skills.getSkills().size() == expectSize );
+        Assertions.assertTrue(person.skills.getSkills().contains(expectedResult) && person.skills.getSkills().size() == expectSize);
         println("Remove Skill Test Executed")
     }
 
     @Test
-    void testSkillIsUnique(){
+    void testSkillIsUnique() {
 
         Person person = new Person();
 

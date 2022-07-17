@@ -4,13 +4,11 @@ import java.time.LocalDate
 
 @groovy.transform.ToString
 @groovy.transform.InheritConstructors
-class Candidate extends Person{
+class Candidate extends Person {
     String name;
     String surname;
     LocalDate dob;
     String cpf;
-
-
 
 
 }

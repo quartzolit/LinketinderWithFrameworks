@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test
 class TypeOfClassTest {
 
     @Test
-    void children(){
+    void children() {
         Candidate candidate = new Candidate();
 
         String candidateType = 'Candidate';
@@ -18,15 +18,15 @@ class TypeOfClassTest {
         String result = typeOfClass(candidate)
         println(result)
 
-        Assertions.assertTrue(result==candidateType)
+        Assertions.assertTrue(result == candidateType)
 
     }
 
 
-    String typeOfClass(Person person){
-        if (person instanceof Candidate){
+    String typeOfClass(Person person) {
+        if (person instanceof Candidate) {
             return 'Candidate'
-        }else {
+        } else {
             return 'Company'
         }
     }

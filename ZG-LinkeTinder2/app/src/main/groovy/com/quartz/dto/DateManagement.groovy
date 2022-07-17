@@ -6,7 +6,7 @@ import java.time.Period
 
 class DateManagement {
 
-    public static int getAge(Date dateOfBirth){
+    public static int getAge(Date dateOfBirth) {
 
         def dob = LocalDate.parse(dateOfBirth.toString(), "yyyy-MM-dd").getYear()
 
@@ -18,7 +18,7 @@ class DateManagement {
         return age
     }
 
-    public static LocalDate getDateOfBirth(int age){
+    public static LocalDate getDateOfBirth(int age) {
 
         def dateofBirth = LocalDate.now().minusYears(age)
 

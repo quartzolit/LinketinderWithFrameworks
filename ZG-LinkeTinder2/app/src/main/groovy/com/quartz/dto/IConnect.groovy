@@ -49,7 +49,6 @@ interface IConnect {
     void updateCompany(Company person)
 
 
-
     void updateVacancy(Vacancy vacancy, int idVacancy, int idCompany)
 
     void updateSkill(String skill, int idSkill)

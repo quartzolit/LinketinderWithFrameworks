@@ -1,6 +1,6 @@
 package com.quartz.model.person
 
-interface ISkills{
+interface ISkills {
 
     void addSkillToList(String skill)
 

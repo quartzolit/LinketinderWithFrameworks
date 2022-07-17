@@ -9,7 +9,7 @@ import { Vacancy } from './Vacancy.model';
 })
 export class HttpRequestService {
   private api = axios.create({
-    baseURL: 'http://localhost:8085/ZG-LinkeTinder2'
+    baseURL: 'http://localhost:8081/api'
 })
 
   private apiGrails = axios.create({
@@ -43,7 +43,7 @@ export class HttpRequestService {
       userPassword:password
     }
     
-    let data = await this.api.post('/login',JSON.stringify(sendJson)).then(res=>{
+    let data = await this.api.post('/person/login',JSON.stringify(sendJson)).then(res=>{
       this.loggedPerson=res.data
 
       this.loggedPerson.skills = res.data.skills.match(/\w+/g)

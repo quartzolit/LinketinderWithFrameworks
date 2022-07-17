@@ -32,24 +32,24 @@ class UpdateServlet extends HttpServlet {
         String objectType = resultJson.get("type").asString();
 
 
-        if(objectType == 'candidate'){
+        if (objectType == 'candidate') {
             updateCandidate(resultJson)
 
-        }else{
+        } else {
             updateCompany(resultJson)
 
         }
 
     }
 
-    public void  updateCandidate(JsonObject result){
+    public void updateCandidate(JsonObject result) {
 
         ConnectPostgres postgres = new ConnectPostgres();
 
         Candidate candidate = new Candidate()
         candidate.name = result.get("name").asString()
         candidate.surname = result.get("surName").asString()
-        candidate.email= result.get("email").asString()
+        candidate.email = result.get("email").asString()
         String dob = result.get("dob").asString()
         println(dob)
         candidate.dob = LocalDate.parse(dob.find(/\d{4}-\d{2}-\d{2}/), 'yyyy-MM-dd')
@@ -60,8 +60,8 @@ class UpdateServlet extends HttpServlet {
         candidate.description = result.get("description").asString()
         def skilled = result.get("skills").asArray()
         ArrayList<String> skillList = new ArrayList<>()
-        skilled.forEach((skill)->{
-            skillList.add(skill.toString().replaceAll('"',''))
+        skilled.forEach((skill) -> {
+            skillList.add(skill.toString().replaceAll('"', ''))
         })
         candidate.skills = new Skills(skills: skillList)
 
@@ -70,12 +70,12 @@ class UpdateServlet extends HttpServlet {
 
     }
 
-    public void updateCompany(JsonObject result){
+    public void updateCompany(JsonObject result) {
         ConnectPostgres postgres = new ConnectPostgres();
 
         Company company = new Company()
         company.name = result.get("name").asString()
-        company.email= result.get("email").asString()
+        company.email = result.get("email").asString()
         company.cnpj = result.get("cnpj").asInt()
         company.country = result.get("country").asString()
         company.cep = result.get("cep").asString()
@@ -83,15 +83,14 @@ class UpdateServlet extends HttpServlet {
         company.description = result.get("description").asString()
         def skilled = result.get("skills").asArray()
         ArrayList<String> skillList = new ArrayList<>()
-        skilled.forEach((skill)->{
-            skillList.add(skill.toString().replaceAll('"',''))
+        skilled.forEach((skill) -> {
+            skillList.add(skill.toString().replaceAll('"', ''))
         })
         company.skills = new Skills(skills: skillList)
 
         postgres.updateCompany(company)
 
     }
-
 
 
 }

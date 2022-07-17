@@ -1,7 +1,7 @@
 package com.quartz.model.person
 
-class Skills implements ISkills{
-    List<String> skills=[];
+class Skills implements ISkills {
+    List<String> skills = [];
 
 
     @Override

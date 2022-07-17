@@ -13,9 +13,9 @@ import jakarta.servlet.http.HttpServletResponse
 import java.util.stream.Collectors
 
 @WebServlet("/skill")
-class SkillServlet extends HttpServlet{
+class SkillServlet extends HttpServlet {
 
-    void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+    void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         BufferedReader result = request.getReader()
 
         response.addHeader("Access-Control-Allow-Origin", "*")
@@ -34,20 +34,18 @@ class SkillServlet extends HttpServlet{
 
         skill.addSkillToList(skillString)
 
-        if(type == 'candidate'){
+        if (type == 'candidate') {
             postgres.insertCandidateSkills(skill, email)
-        }
-        else if (type == 'company'){
+        } else if (type == 'company') {
             String title = resultJson.get("vacancy").asString()
 
             postgres.insertVacancySkills(title, email, skill)
         }
 
 
-
     }
 
-    void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+    void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
 
     }

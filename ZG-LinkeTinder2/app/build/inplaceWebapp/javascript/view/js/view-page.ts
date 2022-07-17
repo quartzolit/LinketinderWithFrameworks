@@ -1,18 +1,18 @@
-import { Person } from "./IPerson";
+import {Person} from "./IPerson";
 
 
 //Redirecting If not Login
 
 
-if(!sessionStorage.loggedPerson){
+if (!sessionStorage.loggedPerson) {
     location.assign("http://localhost:9000/")
 
 }
 
 //--creating global variables
-const peopleList: Person[]=[];
-let filteredList: Person[]= [];
-let filteredBySkillList: Person[]=[];
+const peopleList: Person[] = [];
+let filteredList: Person[] = [];
+let filteredBySkillList: Person[] = [];
 
 let logged: Person;
 let currentItem: Person;
@@ -20,22 +20,21 @@ let currentItem: Person;
 
 loadData();
 
-window.onload = function loadDOM(){
+window.onload = function loadDOM() {
 
-    if(logged.type == "candidate"){
-        filteredList = peopleList.filter((item)=>{
+    if (logged.type == "candidate") {
+        filteredList = peopleList.filter((item) => {
             return item.type === "company";
         });
 
-    }
-    else{
-        filteredList = peopleList.filter((item)=>{
+    } else {
+        filteredList = peopleList.filter((item) => {
             return item.type === "candidate";
         });
     }
 
     //Creating DOM variables
-   
+
     const welcome: HTMLSpanElement = document.querySelector(".welcome") as HTMLSpanElement;
     welcome.textContent = `${logged.name}`;
 
@@ -48,20 +47,20 @@ window.onload = function loadDOM(){
     const swipeRight: HTMLDivElement = document.querySelector(".swipe-right") as HTMLDivElement;
 
     const slotDiv: HTMLDivElement = document.querySelector(".slot") as HTMLDivElement;
-    
+
     const logoutButton: HTMLDivElement = document.querySelector(".logout-button") as HTMLDivElement
 
 
-    if(logged.skills!.length>0){
-        if(logged.skills){
+    if (logged.skills!.length > 0) {
+        if (logged.skills) {
             for (const skill of logged.skills) {
-                creatingOptions(skill)    
+                creatingOptions(skill)
             }
-        } 
+        }
         updateFilteredList();
     }
 
-    
+
     // event Listeners
 
     addButton.addEventListener('click', addingSkillstoList);
@@ -71,54 +70,51 @@ window.onload = function loadDOM(){
     logoutButton.addEventListener("click", saveAndLogout);
 
 
-
-    
-
     //functions
 
 
-    function resetSwipes(){
+    function resetSwipes() {
         logged.approval = [];
         logged.disapproval = [];
     }
 
-    function checkingIfSKillIsUnique(selectedSkill: string){
+    function checkingIfSKillIsUnique(selectedSkill: string) {
         let checkUniqueSkill = false;
 
-        if(logged.skills){
+        if (logged.skills) {
             logged.skills.forEach(e => {
-                if(e === selectedSkill){
+                if (e === selectedSkill) {
                     checkUniqueSkill = true
                 }
-                
+
             });
 
-            if(!checkUniqueSkill){
+            if (!checkUniqueSkill) {
                 logged.skills.push(selectedSkill)
                 creatingOptions(selectedSkill);
                 window.alert("Skill added Successfully");
             }
-            
+
 
         }
 
     }
 
-    function addingSkillstoList(){
+    function addingSkillstoList() {
         let selectedSkill = addSelect.value;
-        
-        if(selectedSkill === "select one"){
+
+        if (selectedSkill === "select one") {
             return
         }
         resetSwipes();
 
         checkingIfSKillIsUnique(selectedSkill);
 
-        updateFilteredList();  
+        updateFilteredList();
     }
 
-    function creatingOptions(element: string){
-      
+    function creatingOptions(element: string) {
+
         const yourNewOption = document.createElement('option');
 
         yourNewOption.value = element;
@@ -126,14 +122,13 @@ window.onload = function loadDOM(){
 
         yourSkillsSelect.appendChild(yourNewOption);
 
-        
 
     }
 
-    function removingSkillstoList(){
-        let selectedSkill:string = yourSkillsSelect.value;
+    function removingSkillstoList() {
+        let selectedSkill: string = yourSkillsSelect.value;
 
-        if(selectedSkill === "select one"){
+        if (selectedSkill === "select one") {
             return
         }
         resetSwipes();
@@ -143,30 +138,30 @@ window.onload = function loadDOM(){
         updateFilteredList();
 
     }
-    
 
-    function updateFilteredList(){
 
-        if(logged.skills){
-            filteredBySkillList = filteredList.filter(item=>{
-                
+    function updateFilteredList() {
+
+        if (logged.skills) {
+            filteredBySkillList = filteredList.filter(item => {
+
                 return item.skills?.some(skill => logged.skills?.includes(skill.toLowerCase()))
 
             })
-        }  
+        }
         showTopItemFromList();
     }
 
-    function showTopItemFromList():void{
+    function showTopItemFromList(): void {
 
-        while(slotDiv.firstElementChild){
+        while (slotDiv.firstElementChild) {
             slotDiv.removeChild(slotDiv.firstElementChild);
         }
 
         //filteredBySkillList=validateList(filteredBySkillList);
 
 
-        if(filteredBySkillList.length>0){
+        if (filteredBySkillList.length > 0) {
             currentItem = getCurrentItem()!;
 
 
@@ -178,10 +173,10 @@ window.onload = function loadDOM(){
 
             //label DOM
             const vacancyInfo1Label = document.createElement("label");
-            if(currentItem.type === "company"){
+            if (currentItem.type === "company") {
                 vacancyInfo1Label.textContent = "Country: ";
 
-            }else{
+            } else {
                 vacancyInfo1Label.textContent = "Age: ";
 
             }
@@ -195,10 +190,10 @@ window.onload = function loadDOM(){
             //spans
 
             const vacancyInfo1Span = document.createElement("span");
-            if(currentItem.type === "company"){
+            if (currentItem.type === "company") {
                 vacancyInfo1Span.textContent = `${currentItem.country}`;
 
-            }else{
+            } else {
                 vacancyInfo1Span.textContent = `${currentItem.age}`;
             }
             const vacancyStateSpan = document.createElement("span");
@@ -207,9 +202,9 @@ window.onload = function loadDOM(){
 
             vacancyDesiredSkillsSpan.textContent = `${currentItem.skills}`;
             const vacancyDescriptionTextArea = document.createElement("textarea");
-            vacancyDescriptionTextArea.setAttribute('readonly','readonly');
-            vacancyDescriptionTextArea.setAttribute('max-lenght','300');
-            vacancyDescriptionTextArea.textContent= `${currentItem.description}`;
+            vacancyDescriptionTextArea.setAttribute('readonly', 'readonly');
+            vacancyDescriptionTextArea.setAttribute('max-lenght', '300');
+            vacancyDescriptionTextArea.textContent = `${currentItem.description}`;
 
 
             vacancyInfo1Label.appendChild(vacancyInfo1Span);
@@ -217,7 +212,7 @@ window.onload = function loadDOM(){
             vacancyDesiredSkillsLabel.appendChild(vacancyDesiredSkillsSpan);
             vacancyDescriptionLabel.appendChild(vacancyDescriptionTextArea);
 
-            
+
             vacancyFieldSet.appendChild(vacancyLegend);
             vacancyFieldSet.appendChild(vacancyInfo1Label);
             vacancyFieldSet.appendChild(vacancyStateLabel);
@@ -225,82 +220,81 @@ window.onload = function loadDOM(){
             vacancyFieldSet.appendChild(vacancyDescriptionLabel);
 
             slotDiv.appendChild(vacancyFieldSet);
-    
-        }else{
+
+        } else {
             noMoreItemsFromList();
         }
 
 
-
     }
 
-    function noMoreItemsFromList(){
+    function noMoreItemsFromList() {
 
-        while(slotDiv.firstElementChild){
+        while (slotDiv.firstElementChild) {
             slotDiv.removeChild(slotDiv.firstElementChild);
         }
 
         const vacancyFieldSet = document.createElement("fieldset");
 
-        vacancyFieldSet.style.height="max-content"
-            const vacancyLegend = document.createElement("legend");
+        vacancyFieldSet.style.height = "max-content"
+        const vacancyLegend = document.createElement("legend");
 
-            vacancyLegend.textContent = `${currentItem.type}`;
+        vacancyLegend.textContent = `${currentItem.type}`;
 
-            const vacancyNoMoreItems = document.createElement("h3");
+        const vacancyNoMoreItems = document.createElement("h3");
 
-            vacancyNoMoreItems.textContent = "No Vacancies for your current skills";
+        vacancyNoMoreItems.textContent = "No Vacancies for your current skills";
 
-            vacancyFieldSet.appendChild(vacancyLegend);
-            vacancyFieldSet.appendChild(vacancyNoMoreItems);
+        vacancyFieldSet.appendChild(vacancyLegend);
+        vacancyFieldSet.appendChild(vacancyNoMoreItems);
 
-            slotDiv.appendChild(vacancyFieldSet);
+        slotDiv.appendChild(vacancyFieldSet);
 
     }
 
-    function getCurrentItem():Person | undefined{
+    function getCurrentItem(): Person | undefined {
 
-        if(filteredBySkillList.length>0){
+        if (filteredBySkillList.length > 0) {
             return filteredBySkillList.shift()!;
         }
-        
+
         return;
 
     }
 
-    function validateList(list: Person[]):Person[]{
+    function validateList(list: Person[]): Person[] {
 
         console.log(logged.approval);
         let checkApproval: boolean = true;
         let checkDisapproval: boolean = true;
-        
-        let newList: Person[] = list.filter(item=>{
 
-            if(logged.approval){
-                if(logged.approval.length>0){
+        let newList: Person[] = list.filter(item => {
+
+            if (logged.approval) {
+                if (logged.approval.length > 0) {
                     for (const approved of logged.approval) {
-                        if(approved.login===item.login){
-                            checkApproval= false;
-                        }  
-                        
+                        if (approved.login === item.login) {
+                            checkApproval = false;
+                        }
+
                     }
                 }
 
-                
+
             }
 
-            if(logged.disapproval){
-                    for (const disapproved of logged.disapproval) {
-                        if(disapproved.login===item.login){
-                            checkDisapproval= false;
-                        } 
-                        
-                        console.log("entrei aqui"); 
+            if (logged.disapproval) {
+                for (const disapproved of logged.disapproval) {
+                    if (disapproved.login === item.login) {
+                        checkDisapproval = false;
                     }
-                
+
+                    console.log("entrei aqui");
+                }
+
             }
 
-            if(checkApproval && checkDisapproval){
+            if (checkApproval && checkDisapproval) {
                 return item;
             }
         })
@@ -309,47 +303,45 @@ window.onload = function loadDOM(){
         console.log(newList)
 
         return newList;
-     
+
 
     }
 
-    function disapprovingSlot(){
+    function disapprovingSlot() {
 
         logged.disapproval?.push(currentItem);
 
-        if(filteredBySkillList.length>0){
+        if (filteredBySkillList.length > 0) {
             showTopItemFromList();
-        }
-        else{
+        } else {
             noMoreItemsFromList();
         }
 
     }
 
-    function approvingSlot(){
+    function approvingSlot() {
 
         logged.approval?.push(currentItem);
 
-      //  console.log(disapprovedList);
+        //  console.log(disapprovedList);
 
-        if(filteredBySkillList.length>0){
+        if (filteredBySkillList.length > 0) {
             showTopItemFromList();
-        }
-        else{
+        } else {
             noMoreItemsFromList();
         }
 
     }
 
-    function saveAndLogout(){
+    function saveAndLogout() {
 
-        for(let i = 0; i< peopleList.length; i++){
-            if(peopleList[i].login === logged.login){
+        for (let i = 0; i < peopleList.length; i++) {
+            if (peopleList[i].login === logged.login) {
                 peopleList[i] = logged;
             }
         }
 
-       // console.log(peopleList)
+        // console.log(peopleList)
 
         sessionStorage.setItem("people", JSON.stringify(peopleList));
 
@@ -359,25 +351,18 @@ window.onload = function loadDOM(){
 
     }
 
-    
-
-
-
-
-
 
 }
 
 
-
-async function loadData(){
+async function loadData() {
 
     peopleList.push(await JSON.parse(sessionStorage.people)[0]);
 
     logged = await JSON.parse(sessionStorage.loggedPerson);
 
 
-    if(peopleList.length < 10){
+    if (peopleList.length < 10) {
 
         const person1: Person = {
             type: "candidate",
@@ -389,7 +374,7 @@ async function loadData(){
             state: "São Paulo",
             cep: "12608-170",
             description: "Cool guy",
-            skills:["CSS", "HTML", "JAVA", "GITHUB", "GROOVY"]
+            skills: ["CSS", "HTML", "JAVA", "GITHUB", "GROOVY"]
 
         };
 
@@ -404,7 +389,7 @@ async function loadData(){
             state: "Minas Gerais",
             cep: "30205-102",
             description: "Eu não faria, mas Josué farias",
-            skills:["JAVA", "GROOVY", "BACKEND"]
+            skills: ["JAVA", "GROOVY", "BACKEND"]
 
         };
 
@@ -418,7 +403,7 @@ async function loadData(){
             state: "São Paulo",
             cep: "11223-278",
             description: "Me passa o gel Gezebel",
-            skills:["DATABASE", "HIBERNATE", "REGEX", "GITHUB"]
+            skills: ["DATABASE", "HIBERNATE", "REGEX", "GITHUB"]
 
         };
 
@@ -432,7 +417,7 @@ async function loadData(){
             state: "Rio de Janeiro",
             cep: "21551-003",
             description: "Não me peça para limar. Duarte, Lima",
-            skills:["BACKEND", "FRONTEND", "DATABASE"]
+            skills: ["BACKEND", "FRONTEND", "DATABASE"]
 
         };
 
@@ -446,7 +431,7 @@ async function loadData(){
             state: "Sergipe",
             cep: "49000-200",
             description: "Gosto de cebola",
-            skills:["JAVA","GROOVY"]
+            skills: ["JAVA", "GROOVY"]
 
         };
 
@@ -460,7 +445,7 @@ async function loadData(){
             state: "Goiás",
             cep: "74070-040",
             description: "Awesome Company to work",
-            skills:["DATABASE", "JAVA", "GROOVY", "GITHUB"]
+            skills: ["DATABASE", "JAVA", "GROOVY", "GITHUB"]
 
         };
 
@@ -474,7 +459,7 @@ async function loadData(){
             state: "Rio de Janeiro",
             cep: "20.031-912",
             description: "Gas super high price",
-            skills:["CSS", "HTML", "BACKEND", "GITHUB"]
+            skills: ["CSS", "HTML", "BACKEND", "GITHUB"]
 
         };
 
@@ -488,7 +473,7 @@ async function loadData(){
             state: "Mato Grosso do Sul",
             cep: "69512-030",
             description: "Selling good quality rice",
-            skills:["DATABASE", "FRONTEND", "REGEX","CSS"]
+            skills: ["DATABASE", "FRONTEND", "REGEX", "CSS"]
 
         };
 
@@ -502,7 +487,7 @@ async function loadData(){
             state: "Maranhão",
             cep: "81224-103",
             description: "Come play with us",
-            skills:["DATABASE", "BACKEND", "FRONTEND", "GITHUB"]
+            skills: ["DATABASE", "BACKEND", "FRONTEND", "GITHUB"]
 
         };
 
@@ -516,7 +501,7 @@ async function loadData(){
             state: "Goiás",
             cep: "71522-008",
             description: "Come refresh your bull",
-            skills:["HIBERNATE", "JAVA", "GROOVY", "HTML","CSS"]
+            skills: ["HIBERNATE", "JAVA", "GROOVY", "HTML", "CSS"]
 
         };
 

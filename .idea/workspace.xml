@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d47045ec-f7ed-4687-aad3-719498abf8eb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/html/view-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/html/view-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/js/IPerson.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/js/IPerson.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/js/httpRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/js/httpRequest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/js/script.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/js/script.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/js/view-page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/js/view-page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/js/viewPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/js/viewPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ajv/lib/dotjs/if.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ajv/lib/dotjs/if.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ajv/lib/dotjs/not.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ajv/lib/dotjs/not.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ajv/lib/refs/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ajv/lib/refs/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ajv/lib/refs/json-schema-draft-04.json" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ajv/lib/refs/json-schema-draft-04.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ajv/lib/refs/json-schema-draft-06.json" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ajv/lib/refs/json-schema-draft-06.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ajv/lib/refs/json-schema-draft-07.json" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ajv/lib/refs/json-schema-draft-07.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ajv/lib/refs/json-schema-secure.json" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ajv/lib/refs/json-schema-secure.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/he/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/he/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/he/bin/he" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/he/bin/he" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/he/he.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/he/he.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ms/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ms/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ms/license.md" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ms/license.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ms/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ms/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/.github/FUNDING.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/.github/FUNDING.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/dist/qs.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/dist/qs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/lib/parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/lib/parse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/lib/stringify.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/lib/stringify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/lib/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/lib/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/test/parse.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/test/parse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/test/stringify.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/test/stringify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/test/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/qs/test/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/browser.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/browser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/buffer-util.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/buffer-util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/event-target.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/event-target.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/extension.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/extension.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/limiter.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/limiter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/permessage-deflate.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/permessage-deflate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/receiver.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/receiver.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/sender.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/sender.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/stream.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/stream.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/subprotocol.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/subprotocol.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/validation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/websocket-server.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/websocket-server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/websocket.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/lib/websocket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/wrapper.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/inplaceWebapp/javascript/view/node_modules/ws/wrapper.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/reports/tests/test/classes/com.quartz.TypeOfClassTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/reports/tests/test/classes/com.quartz.TypeOfClassTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/reports/tests/test/js/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/reports/tests/test/js/report.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/reports/tests/test/packages/com.quartz.html" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/reports/tests/test/packages/com.quartz.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/test-results/test/TEST-com.quartz.TypeOfClassTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/build/test-results/test/TEST-com.quartz.TypeOfClassTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/controller/LoggedServlet.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/controller/LoggedServlet.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/controller/SignupServlet.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/controller/SignupServlet.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/controller/SkillServlet.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/controller/SkillServlet.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/controller/UpdateServlet.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/controller/UpdateServlet.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/dto/ConnectPostgres.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/dto/ConnectPostgres.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/dto/DateManagement.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/dto/DateManagement.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/dto/IConnect.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/dto/IConnect.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/dto/factory/PostgresConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/dto/factory/PostgresConnect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/model/Loader.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/model/Loader.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/model/person/Candidate.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/model/person/Candidate.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/model/person/Company.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/model/person/Company.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/model/person/EnumSkills.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/model/person/EnumSkills.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/model/person/ISkills.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/model/person/ISkills.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/model/person/Person.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/model/person/Person.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/model/person/Skills.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/model/person/Skills.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/model/person/Vacancy.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/main/groovy/com/quartz/model/person/Vacancy.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/test/groovy/com/quartz/LoaderTest.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/test/groovy/com/quartz/LoaderTest.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/test/groovy/com/quartz/PersonTestGroovy.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/test/groovy/com/quartz/PersonTestGroovy.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/test/groovy/com/quartz/TypeOfClassTest.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/ZG-LinkeTinder2/app/src/test/groovy/com/quartz/TypeOfClassTest.groovy" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2C2QmNvqkifyzNkgLUNK0Dpkbc6" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="LinketinderWithFrameworksSpring" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="LinketinderWithFrameworksSpring" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d47045ec-f7ed-4687-aad3-719498abf8eb" name="Changes" comment="" />
+      <created>1657998359355</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657998359355</updated>
+      <workItem from="1657998361290" duration="240000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

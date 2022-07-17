@@ -2,7 +2,7 @@ package com.quartz.model.person
 
 @groovy.transform.ToString
 
-class Person{
+class Person {
     int id;
     String email;
     String state;

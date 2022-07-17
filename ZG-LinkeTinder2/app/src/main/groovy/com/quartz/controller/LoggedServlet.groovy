@@ -34,11 +34,11 @@ class LoggedServlet extends HttpServlet {
 
         println(isCandidate)
 
-        if(isCandidate!= null){
+        if (isCandidate != null) {
             println("entrei aqui")
             JsonObject jsonRes = null
 
-            if(isCandidate.password == objectPassword ){
+            if (isCandidate.password == objectPassword) {
                 jsonRes = getCandidateJson(isCandidate)
 
             }
@@ -48,16 +48,16 @@ class LoggedServlet extends HttpServlet {
             responseJson.print(jsonRes)
             responseJson.flush()
 
-        }else{
+        } else {
             println("entrei no lugar certo")
 
             Company isCompany = postgres.showCompanyByEmail(objectEmail)
 
-            if(isCompany){
+            if (isCompany) {
 
                 JsonObject jsonRes = null
 
-                if(isCompany.password == objectPassword){
+                if (isCompany.password == objectPassword) {
                     jsonRes = getCompanyJson(isCompany)
 
                 }
@@ -67,7 +67,7 @@ class LoggedServlet extends HttpServlet {
                 //response.getCharacterEncoding("UTF-8")
                 responseJson.print(jsonRes)
                 responseJson.flush()
-            }else {
+            } else {
 
                 JsonObject jsonRes = null
 
@@ -83,7 +83,7 @@ class LoggedServlet extends HttpServlet {
 
     }
 
-    public JsonObject getCandidateJson(Candidate candidate){
+    public JsonObject getCandidateJson(Candidate candidate) {
         JsonObject loggedPerson = new JsonObject()
 
         loggedPerson.add("type", "candidate")
@@ -100,7 +100,7 @@ class LoggedServlet extends HttpServlet {
 
     }
 
-    public JsonObject getCompanyJson(Company company){
+    public JsonObject getCompanyJson(Company company) {
         JsonObject loggedPerson = new JsonObject()
 
         loggedPerson.add("type", "company")

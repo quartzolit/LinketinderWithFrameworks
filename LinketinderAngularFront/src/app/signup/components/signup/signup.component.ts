@@ -31,7 +31,7 @@ export class SignupComponent implements OnInit {
 
   this.person.type = this.radioCandidate
   if(this.birthdate.length>8){
-    this.person.dob = new Date(this.birthdate)
+    this.person.birthdate = new Date(this.birthdate)
   }
   this.result = this.signupService.cadastrar(this.person)
 
