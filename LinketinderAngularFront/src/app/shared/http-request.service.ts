@@ -60,7 +60,13 @@ export class HttpRequestService {
     let data = await this.api.post('/person/login',JSON.stringify(sendJson),option).then(res=>{
       this.loggedPerson=res.data
 
-      this.loggedPerson.skills = res.data.skills.match(/\w+/g)
+      if(this.loggedPerson.skills){
+        this.loggedPerson.skills = res.data.skills.match(/\w+/g)
+      }
+      else{
+        this.loggedPerson.skills=[]
+      }
+      
       return res.data
     })
 
