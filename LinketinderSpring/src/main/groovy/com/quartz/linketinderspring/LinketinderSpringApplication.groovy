@@ -13,6 +13,7 @@ import java.time.LocalDate
 @SpringBootApplication
 class LinketinderSpringApplication {
 
+    /*
     @Bean
     CommandLineRunner commandLineRunner(@Autowired Candidates candidates){
         return (args)->{
@@ -26,6 +27,8 @@ class LinketinderSpringApplication {
             println(candidates.findById(c.id))
         }
     }
+
+     */
 
     static void main(String[] args) {
         SpringApplication.run(LinketinderSpringApplication, args)

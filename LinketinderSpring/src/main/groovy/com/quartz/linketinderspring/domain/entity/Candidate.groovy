@@ -8,6 +8,9 @@ import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Id
+import javax.persistence.JoinColumn
+import javax.persistence.JoinTable
+import javax.persistence.ManyToMany
 import javax.persistence.Table
 import java.time.LocalDate
 
@@ -32,5 +35,13 @@ class Candidate extends Person{
 
     @Column(name="personal_description")
     String description
+
+    @ManyToMany
+    @JoinTable(
+            name= "candidates_skills",
+            joinColumns = @JoinColumn(name="id_candidate"),
+            inverseJoinColumns = @JoinColumn(name="id_skill")
+    )
+    Set<Skill>skills
 
 }

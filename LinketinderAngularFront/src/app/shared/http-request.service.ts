@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import axios, { AxiosResponse } from "axios";
-import { filter } from 'rxjs';
+import { config, filter } from 'rxjs';
 import { Person } from './Person.model';
 import { Vacancy } from './Vacancy.model';
 
@@ -25,7 +25,14 @@ export class HttpRequestService {
     let status:number;
     let check:boolean = false;
 
-    this.api.post('/person',JSON.stringify(body)).then((res) =>{
+    let option = {
+      headers:{
+        'Accept': 'application/json',
+        'Content-type':'application/json'
+      }
+    }
+
+    this.api.post('/person',JSON.stringify(body),option).then((res) =>{
       status = res.status
     })
 
@@ -42,8 +49,15 @@ export class HttpRequestService {
       userEmail: email,
       userPassword:password
     }
+
+    let option = {
+      headers:{
+        'Accept': 'application/json',
+        'Content-type':'application/json'
+      }
+    }
     
-    let data = await this.api.post('/person/login',JSON.stringify(sendJson)).then(res=>{
+    let data = await this.api.post('/person/login',JSON.stringify(sendJson),option).then(res=>{
       this.loggedPerson=res.data
 
       this.loggedPerson.skills = res.data.skills.match(/\w+/g)
@@ -58,13 +72,27 @@ export class HttpRequestService {
 
   updatePersonInfo(body:Person):void{
 
-    this.api.post('/update/person', JSON.stringify(body));
+    let option = {
+      headers:{
+        'Accept': 'application/json',
+        'Content-type':'application/json'
+      }
+    }
+
+    this.api.post('/update/person', JSON.stringify(body),option);
 
   }
 
   async getPeopleListBasedOnLoggedPerson(type:string){
 
-    let data = await this.api.get(`/person?type=${type}`).then(res=>{
+    let option = {
+      headers:{
+        'Accept': 'application/json',
+        'Content-type':'application/json'
+      }
+    }
+
+    let data = await this.api.get(`/person?type=${type}`,option).then(res=>{
       this.peopleList = res.data
 
     })
@@ -73,13 +101,16 @@ export class HttpRequestService {
 
  async addVacancy(body:Person):Promise<Person>{
 
+  let option = {
+    headers:{
+      'Accept': 'application/json',
+      'Content-type':'application/json'
+    }
+  }
+
   body.vacancy.forEach(async vacancy=>{
     if(!vacancy.id){
-      await this.apiGrails.post(`/vacancy/${body.id}`, JSON.stringify(vacancy),{
-        headers:{
-          'Content-Type': 'application/json'
-        }
-      }).then(res=>{
+      await this.apiGrails.post(`/vacancy/${body.id}`, JSON.stringify(vacancy),option).then(res=>{
         vacancy.id = res.data    
       })
     }
