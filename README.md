@@ -18,12 +18,4 @@ Nothing implemented yet. Want to use Spock to test our methods
 
 ## Documentation
 
-To be implemented. We're going to use Swagger framework to implement the documentation of our API's
-
-
-## Endpoints
-
-(Post) /person - sign up the formulary section
-(get)  /person - get all data according to the person who login the page
-(post) /login - search for e-mail and password to bring from DB the account information
-(post) /update/person - update status from skills
+Swagger Implementation is added on Spring package. We tried to implement on Grails but it was returning an error. A swagger foulder was added containing our endpoints configuration, such as swagger client file
