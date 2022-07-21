@@ -1,36 +1,27 @@
-package linketinder
+package com.quartz.linketinderspring.configs
 
-import grails.boot.GrailsApp
-import grails.boot.config.GrailsAutoConfiguration
-
-import groovy.transform.CompileStatic
 import org.springframework.context.annotation.Bean
-import org.springframework.context.annotation.Import
+import org.springframework.context.annotation.Configuration
 import springfox.documentation.builders.PathSelectors
 import springfox.documentation.builders.RequestHandlerSelectors
-import springfox.documentation.grails.SpringfoxGrailsIntegrationConfiguration
 import springfox.documentation.service.ApiInfo
 import springfox.documentation.service.Contact
 import springfox.documentation.service.VendorExtension
 import springfox.documentation.spi.DocumentationType
 import springfox.documentation.spring.web.plugins.Docket
-import springfox.documentation.swagger2.annotations.EnableSwagger2
+import springfox.documentation.swagger2.annotations.EnableSwagger2WebMvc
 
-@CompileStatic
-@EnableSwagger2
-@Import([SpringfoxGrailsIntegrationConfiguration])
-class Application extends GrailsAutoConfiguration {
-    static void main(String[] args) {
-        GrailsApp.run(Application, args)
-    }
+@Configuration
+@EnableSwagger2WebMvc
+class SwaggerConfig {
 
     @Bean
-    Docket productApi() {
+    public Docket productApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .useDefaultResponseMessages(false)
                 .select()
-                .paths(PathSelectors.any())
-                .apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.regex("/api/person.*"))
+                .apis(RequestHandlerSelectors.basePackage("com.quartz.linketinderspring.rest.controllers"))
                 .build()
                 .apiInfo(metaInfo());
     }

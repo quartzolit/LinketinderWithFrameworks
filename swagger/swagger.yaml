@@ -1,0 +1,279 @@
+swagger: "2.0"
+info:
+  description: "Documentação para tratar da aplicação web Linketinder. A fusão do LinkedIn com o Tinder"
+  version: "0.0.1"
+  title: "Linketinder"
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    name: "Luiz Arthur Silva Moura"
+    email: "larthurs.moura@gmail.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "petstore.swagger.io"
+basePath: "/v1"
+tags:
+- name: "MS-Signup"
+  description: "Everything about new user's signup"
+- name: "MS-Skills"
+  description: "Add and remove skills from user"
+- name: "MS-Vacancy"
+  description: "Add and remove vacancies from companies"
+schemes:
+- "https"
+- "http"
+
+paths:
+
+
+  /api/person:
+    get:
+      tags:
+      - "MS-Signup"
+      summary: "Add a new user on the platform"
+      description: ""
+      operationId: "getAllUsers"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "query"
+        name: "type"
+        description: "User JSON required for signup a candidate or a company"
+        required: true
+        type: "string"
+        enum:
+        - "candidate"
+        - "company"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            type: "array"
+            items: {
+              $ref: "#/definitions/Person"
+            }
+          
+        "405":
+          description: "Invalid input"
+      
+      
+  /api/person/signup:
+    post:
+      tags:
+      - "MS-Signup"
+      summary: "Add a new user on the platform"
+      description: ""
+      operationId: "saveNewUser"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "User JSON required for signup a candidate or a company"
+        required: true
+        schema:
+          $ref: "#/definitions/Person"
+      responses:
+        "405":
+          description: "Invalid input"
+
+  /api/person/login:
+    post:
+      tags:
+      - "MS-Signup"
+      summary: "Login on the platform"
+      description: ""
+      operationId: "receiveLogin"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "User object that needs to login"
+        required: true
+        schema:
+          $ref: "#/definitions/Login"
+      responses:
+        "404":
+          description: "User not found"
+        "400":
+          description: "Bad request"
+
+  /skill/update/{id}:
+    put:
+      tags:
+      - "MS-Skills"
+      summary: "Update skills based on front-end selection"
+      description: "Multiple status values can be provided with comma separated strings"
+      operationId: "updateSkills"
+      produces:
+      - "application/json"
+      consumes:
+      - "application/json"
+      parameters:
+      - in: "path"
+        name: "id"
+        type: "integer"
+        required: true
+      - in: "body"
+        name: "body"
+        description: "User object that needs to login"
+        required: true
+        schema:
+          $ref: "#/definitions/Person"
+      responses:
+        "200":
+          description: "successful operation"
+        "400":
+          description: "Invalid status value"
+
+  /vacancy/{companyId}:
+    post:
+      tags:
+      - "MS-Vacancy"
+      summary: "Add a new Vacancy to user Id"
+      description: "Only one vacancy object can be stored at time"
+      operationId: "findPetsByTags"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "path"
+        name: "companyId"
+        type: "integer"
+        required: true
+
+      - in: "body"
+        name: "body"
+        description: "User object that needs to add a Vacancy"
+        required: true
+        schema:
+          $ref: "#/definitions/Person"
+      responses:
+        "201":
+          description: "Vacancy Created successfully"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Vacancy"
+        "400":
+          description: "Invalid tag value"
+
+  /vacancy/delete/{id}:
+    delete:
+      tags:
+      - "MS-Vacancy"
+      summary: "Delete company vacancy"
+      description: "delete Vacancy base on this Id"
+      operationId: "deleteVacancy"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "path"
+        name: "id"
+        type: "integer"
+        required: true
+      responses:
+        "200":
+          description: "successful operation"
+        "400":
+          description: "Invalid ID supplied"
+        "404":
+          description: "Vacancy not found"
+
+   
+definitions:
+  Person:
+    type: "object"
+    required:
+      - "email"
+      - "type"
+      - "cep"
+      - "state"
+      - "country"
+    properties:
+      id:
+        type: "integer"
+      type:
+        type: "string"
+        enum:
+        - "candidate"
+        - "company"
+      email:
+        type: "string"
+      name:
+        type: "string"
+      surName:
+        type: "string"
+      cpf:
+        type: "string"
+      cnpj:
+        type: "string"
+      companyName:
+        type: "string"
+      dateOfBirth:
+        type: "string"
+        format: "date"
+      cep:
+        type: "string"
+      state:
+        type: "string"
+      country:
+        type: "string"
+      password:
+        type: "string"
+        
+      skills:
+        type: "array"
+        items: {
+          type: "string"
+        }
+      
+      vacancies:
+        type: "array"
+        items: {
+          $ref: "#/definitions/Vacancy"
+        }
+      
+      approval:
+        type: "array"
+        items: {
+          type: "string"
+        }
+      disapproval:
+        type: "array"
+        items: {
+          type: "string"
+        }
+
+  Vacancy:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+      title:
+        type: "string"
+      skills:
+        type: "array"
+        items: {
+          type: "string"
+        }
+      
+  Login:
+    type: "object"
+    properties:
+      userEmail:
+        type: "string"
+      userPassword:
+        type: "string"
+
+  
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"

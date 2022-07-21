@@ -6,6 +6,7 @@ import com.quartz.linketinderspring.domain.entity.Person
 import com.quartz.linketinderspring.rest.dtos.LoginDTO
 import com.quartz.linketinderspring.rest.dtos.PersonDTO
 import com.quartz.linketinderspring.services.IPersonService
+import io.swagger.annotations.ApiOperation
 import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
@@ -18,11 +19,7 @@ import org.springframework.web.server.ResponseStatusException
 import static org.springframework.http.HttpStatus.*;
 
 @RestController
-@RequestMapping(value = "/api/person",
-        consumes = ["application/json", "application/json", "text/plain"],
-        produces =["application/json", "application/json", "text/plain"]
-
-)
+@RequestMapping(value = "/api/person")
 class PersonController {
 
     IPersonService service
@@ -31,9 +28,10 @@ class PersonController {
         this.service = service
     }
 
-    @PostMapping
+    @PostMapping("/signup")
     @ResponseStatus(CREATED)
     @CrossOrigin(origins = "http://localhost:4200")
+    //@ApiOperation(value = "addNewUser")
     void saveNewUser(@RequestBody PersonDTO dto){
         Person user = service.save(dto)
 

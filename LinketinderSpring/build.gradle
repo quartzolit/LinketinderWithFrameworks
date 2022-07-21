@@ -1,6 +1,6 @@
 plugins {
-    id 'org.springframework.boot' version '2.7.1'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'org.springframework.boot' version '2.7.2'
+    id 'io.spring.dependency-management' version '1.0.12.RELEASE'
     id 'groovy'
 }
 
@@ -19,7 +19,12 @@ dependencies {
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     runtimeOnly group: 'org.postgresql', name: 'postgresql', version: '42.4.0'
+    implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.10.5'
+    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.10.5'
+    implementation group: 'io.springfox', name: 'springfox-spring-webmvc', version: '2.10.5'
+    implementation group: 'io.springfox', name: 'springfox-data-rest', version: '2.10.5'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation group: 'org.spockframework', name: 'spock-core', version: '2.2-M3-groovy-4.0'
 }
 
 tasks.named('test') {

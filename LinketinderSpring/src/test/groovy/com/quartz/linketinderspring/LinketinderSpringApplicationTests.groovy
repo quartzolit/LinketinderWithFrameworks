@@ -2,12 +2,58 @@ package com.quartz.linketinderspring
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
+import spock.lang.Specification
 
-@SpringBootTest
-class LinketinderSpringApplicationTests {
+class LinketinderSpringApplicationTests extends Specification{
 
-    @Test
-    void contextLoads() {
-    }
+//    def "validade create candidate"(){
+//
+//        given:
+//
+//        when:
+//
+//        then:
+//
+//    }
+//
+//    def "validade create company"(){
+//
+//        given:
+//
+//        when:
+//
+//        then:
+//
+//    }
+//
+//    def "validate login user"(){
+//
+//        given:
+//
+//        when:
+//
+//        then:
+//
+//    }
+//
+//    def "validate wrong e-mail on login"(){
+//
+//        given:
+//
+//        when:
+//
+//        then:
+//
+//    }
+//
+//    def "validate wrong password on login"(){
+//
+//        given:
+//
+//        when:
+//
+//        then:
+//
+//    }
 
 }

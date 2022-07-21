@@ -29,6 +29,7 @@ configurations {
     }
 }
 
+
 dependencies {
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     compileOnly "io.micronaut:micronaut-inject-groovy"
@@ -69,6 +70,13 @@ dependencies {
     testImplementation "org.grails:grails-web-testing-support"
     testImplementation "org.grails:views-json-testing-support"
     testImplementation "org.hibernate.validator:hibernate-validator:6.1.7.Final"
+    implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.1'
+    implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.7.1'
+
+    implementation"io.springfox:springfox-swagger2:2.7.0"
+    implementation"io.springfox:springfox-swagger-ui:2.7.0"
+    implementation"io.springfox.grails:springfox-grails:1.0.0"
+
 }
 
 bootRun {

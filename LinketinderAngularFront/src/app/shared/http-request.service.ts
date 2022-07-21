@@ -32,7 +32,7 @@ export class HttpRequestService {
       }
     }
 
-    this.api.post('/person',JSON.stringify(body),option).then((res) =>{
+    this.api.post('/person/signup',JSON.stringify(body),option).then((res) =>{
       status = res.status
     })
 
@@ -85,7 +85,7 @@ export class HttpRequestService {
       }
     }
 
-    this.api.post('/update/person', JSON.stringify(body),option);
+    this.api.post('/skill/update', JSON.stringify(body),option);
 
   }
 
