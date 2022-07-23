@@ -1,8 +1,8 @@
 package com.quartz.linketinderspring.exceptions
 
-class EmailAlreadyExist extends RuntimeException{
+class EmailAlreadyExistException extends RuntimeException{
 
-    EmailAlreadyExist(){
+    EmailAlreadyExistException(){
         super("E-mail already used")
     }
 }

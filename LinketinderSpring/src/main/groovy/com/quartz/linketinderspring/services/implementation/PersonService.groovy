@@ -5,14 +5,12 @@ import com.quartz.linketinderspring.domain.entity.Company
 import com.quartz.linketinderspring.domain.entity.Person
 import com.quartz.linketinderspring.domain.repository.Candidates
 import com.quartz.linketinderspring.domain.repository.Companies
+import com.quartz.linketinderspring.exceptions.EmailAlreadyExistException
 import com.quartz.linketinderspring.exceptions.InvalidEmailOrPasswordException
 import com.quartz.linketinderspring.rest.dtos.LoginDTO
 import com.quartz.linketinderspring.rest.dtos.PersonDTO
 import com.quartz.linketinderspring.services.IPersonService
 import org.springframework.stereotype.Service
-import org.springframework.web.server.ResponseStatusException
-
-import static org.springframework.http.HttpStatus.NOT_FOUND
 
 @Service
 class PersonService implements IPersonService{
@@ -50,6 +48,14 @@ class PersonService implements IPersonService{
             companiesRepository.save(company)
             return company
         }
+        else {
+
+            throw new EmailAlreadyExistException()
+
+        }
+
+
+
         return null
     }
 
@@ -86,7 +92,6 @@ class PersonService implements IPersonService{
             if(company.isPresent()){
                 return company
             }
-
         }
         else {
             return candidate

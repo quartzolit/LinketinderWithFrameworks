@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.ResponseStatus
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.server.ResponseStatusException
 
+import javax.validation.Valid
+
 import static org.springframework.http.HttpStatus.*;
 
 @RestController
@@ -32,7 +34,7 @@ class PersonController {
     @ResponseStatus(CREATED)
     @CrossOrigin(origins = "http://localhost:4200")
     //@ApiOperation(value = "addNewUser")
-    void saveNewUser(@RequestBody PersonDTO dto){
+    void saveNewUser(@RequestBody @Valid PersonDTO dto){
         Person user = service.save(dto)
 
         if(!user){
@@ -43,7 +45,7 @@ class PersonController {
     @PostMapping("/login")
     @ResponseStatus(OK)
     @CrossOrigin(origins = "http://localhost:4200")
-    Optional<PersonDTO> receiveLogin(@RequestBody LoginDTO dto){
+    Optional<PersonDTO> receiveLogin(@RequestBody @Valid LoginDTO dto){
 
         Optional<PersonDTO> userDto = service.getPersonByEmailAndPassword(dto)
 

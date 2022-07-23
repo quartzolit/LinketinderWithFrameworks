@@ -2,6 +2,7 @@ package com.quartz.linketinderspring.rest.dtos
 
 import com.quartz.linketinderspring.domain.entity.Person
 import com.quartz.linketinderspring.domain.entity.Vacancy
+import groovy.transform.ToString
 
 import java.time.LocalDate
 
@@ -31,6 +32,7 @@ import java.time.LocalDate
 
  * */
 
+@ToString
 class PersonDTO {
     String type
     Integer id
