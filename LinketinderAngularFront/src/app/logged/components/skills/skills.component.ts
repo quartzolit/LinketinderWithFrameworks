@@ -15,9 +15,9 @@ export class SkillsComponent implements OnInit {
   //fcp = faCirclePlus;
   public removeSkill:string = 'select-one';
   public addSkill:string = 'select-one';
+  public level:string ='None';
 
    
-
   constructor(private skillService:SkillsService, private apiRequest:HttpRequestService, private router:Router) { }
 
   ngOnInit(): void {
@@ -38,7 +38,7 @@ export class SkillsComponent implements OnInit {
   }
 
   addSkillOnList(){
-    this.loggedPerson = this.skillService.addAndUpdate(this.addSkill, this.loggedPerson)
+    this.loggedPerson = this.skillService.addAndUpdate(this.addSkill, this.loggedPerson, this.level)
     this.addSkill= 'select-one';
 
   }

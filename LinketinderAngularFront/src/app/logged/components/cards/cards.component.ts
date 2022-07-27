@@ -32,7 +32,10 @@ export class CardsComponent implements OnInit {
     this.loggedPerson = await this.cardsService.getLogged()
     this.peopleList = await this.cardsService.getPeopleList(this.loggedPerson.type);
 
-    this.currentCard = this.peopleList.pop()
+    if(this.peopleList.length > 0){
+
+      this.currentCard = this.peopleList.pop()
+    }
 
     console.log(this.peopleList)
 

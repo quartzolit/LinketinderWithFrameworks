@@ -16,4 +16,6 @@ interface IPersonService {
 
     Company convertToCompany(PersonDTO dto)
 
+    List<PersonDTO> getDataByType(String type)
+
 }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpRequestService, Person } from 'src/app/shared';
+import { HttpRequestService, Person, Skill } from 'src/app/shared';
 import { CardsService } from './cards.service';
 
 @Injectable({
@@ -11,7 +11,7 @@ export class SkillsService {
 
 
 
-  addAndUpdate(selectedSkill:string, person: Person): Person{
+  addAndUpdate(selectedSkill:string, person: Person, level:string): Person{
 
     if(selectedSkill=="select-one"){
       return person
@@ -21,16 +21,30 @@ export class SkillsService {
     if(person.skills){
 
     let isOnTheList = person.skills.find(sk=>{
-      sk==selectedSkill
+      sk.skillName==selectedSkill
     })
 
     if(isOnTheList){
       return person
     }
-    person.skills.push(selectedSkill)
+
+    let newSkill = new Skill()
+
+    newSkill.skillName = selectedSkill
+    newSkill.level = level
+
+    
+    person.skills.push(newSkill)
+
   }else{
     person.skills = []
-    person.skills.push(selectedSkill)
+
+    let newSkill = new Skill()
+    newSkill.skillName = selectedSkill
+    newSkill.level = level
+
+    
+    person.skills.push(newSkill)
   }
 
    
@@ -45,9 +59,10 @@ export class SkillsService {
   removeAndUpdate(selectedSkill:string, person: Person): Person{
 
     if(person.skills){
-      let index = person.skills.indexOf(selectedSkill)
-
-      person.skills.splice(index,1)
+      person.skills.filter( (skill) =>{
+        
+        return skill.skillName!==selectedSkill
+      })
 
       this.update(person)
 

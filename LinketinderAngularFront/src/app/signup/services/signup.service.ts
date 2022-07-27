@@ -39,11 +39,7 @@ export class SignupService {
     let reason: string = ''
     let regex:PeopleRegex = new PeopleRegex;
 
-    if(!body.name.match(regex.nameRegex)){
-      validate = false;
-      reason = 'Nome Precisa ser maior do que 3 caracteres'
-      return {check: validate, reason: reason}
-    }
+  
     if(!body.email.match(regex.emailRegex)){
       validate = false;
       reason = 'Email inválido'
@@ -61,11 +57,17 @@ export class SignupService {
         reason = 'CPF inválido (xxx.xxx.xxx-xx)'
         return {check: validate, reason: reason}
       }
+
+      if(!body.name.match(regex.nameRegex)){
+        validate = false;
+        reason = 'Nome Precisa ser maior do que 3 caracteres'
+        return {check: validate, reason: reason}
+      }
     }
     if(body.type == 'company'){
       if(!body.cnpj.match(regex.cnpjRegex)){
         validate = false;
-        reason = 'cnpj inválido (xx.xxx.xxx/001-xx ou xx.xxx.xxx/002-xx)'
+        reason = 'cnpj inválido (xx.xxx.xxx/0001-xx ou xx.xxx.xxx/0002-xx)'
         return {check: validate, reason: reason}
       }
     }

@@ -27,7 +27,7 @@ class CandidateDomainTest extends Specification{
 
 
         Candidate candidate2 = new Candidate(
-                name: "teste", surName: "show",hg
+                name: "teste", surName: "show",
                 cpf: "12312312315", birthdate: LocalDate.now(),
                 state: "São Paulo", country: "Brasil",
                 description: "nice", cep: "11222-000",

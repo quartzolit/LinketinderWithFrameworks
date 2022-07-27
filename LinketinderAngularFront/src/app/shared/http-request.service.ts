@@ -16,6 +16,10 @@ export class HttpRequestService {
     baseURL: 'http://localhost:8080'
   })
 
+  private apiMicronaut = axios.create({
+    baseURL: "httop://localhost:8082/api"
+  })
+
   public loggedPerson:Person;
   public peopleList:Person[];
 
@@ -85,7 +89,7 @@ export class HttpRequestService {
       }
     }
 
-    this.api.post('/skill/update', JSON.stringify(body),option);
+    this.apiMicronaut.post('/skill', JSON.stringify(body),option);
 
   }
 

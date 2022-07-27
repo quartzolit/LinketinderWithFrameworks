@@ -32,8 +32,6 @@ export class CardsService {
     for(let person of this.apiRequest.peopleList){
       separatingSkills = JSON.stringify(person.skills)
 
-      person.skills = separatingSkills.match(/\w+/g)
-
       if(!person.approval){
         person.approval = []
       }

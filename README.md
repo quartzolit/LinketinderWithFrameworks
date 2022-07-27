@@ -12,9 +12,11 @@ We've created login and signup feature using Spring Framework
 
 Also created Vacancy feature using Grails frame work (Need improvements)
 
+Finally, we added skills endpoints to update skills from user. In this case we've used Micronaut Framework
+
 ## Tests
 
-Nothing implemented yet. Want to use Spock to test our methods
+Spock tests were implemented on Signup MS
 
 ## Documentation
 

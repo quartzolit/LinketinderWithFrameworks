@@ -11,7 +11,7 @@ export class SignupComponent implements OnInit {
 
   public person:Person = new Person;
   public result: any;
-  public birthdate:string;
+  public birthdate:string=""
   public confirmPassword:string;
   public radioCandidate: string = 'candidate';
 
@@ -30,7 +30,7 @@ export class SignupComponent implements OnInit {
   console.log(this.birthdate)
 
   this.person.type = this.radioCandidate
-  if(this.birthdate.length>8){
+  if(this.birthdate.length>8 && this.person.type=='candidate'){
     this.person.birthdate = new Date(this.birthdate)
   }
   this.result = this.signupService.cadastrar(this.person)

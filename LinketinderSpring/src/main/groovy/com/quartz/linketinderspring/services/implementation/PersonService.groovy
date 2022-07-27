@@ -9,6 +9,7 @@ import com.quartz.linketinderspring.exceptions.EmailAlreadyExistException
 import com.quartz.linketinderspring.exceptions.InvalidEmailOrPasswordException
 import com.quartz.linketinderspring.rest.dtos.LoginDTO
 import com.quartz.linketinderspring.rest.dtos.PersonDTO
+import com.quartz.linketinderspring.rest.dtos.SkillDTO
 import com.quartz.linketinderspring.services.IPersonService
 import org.springframework.stereotype.Service
 
@@ -120,9 +121,63 @@ class PersonService implements IPersonService{
 
     }
 
-    PersonDTO convertToDTO(Person person){
-        if(person instanceof Candidate){
+    @Override
+    List<PersonDTO> getDataByType(String type) {
+        List<PersonDTO> list = new ArrayList<>()
+        List<Company> companies = new ArrayList<>()
+        List<Candidate> candidates = new ArrayList<>()
 
+
+        if(type == 'candidate'){
+
+            companies = companiesRepository.findAll()
+
+
+            list = companies.forEach(person->{
+
+
+                List<SkillDTO> skillDTO = new ArrayList<>()
+
+
+                return new PersonDTO(
+                        type: 'company',
+                        id: person.id,
+                        email: person.email,
+                        companyName: person.name,
+                        cnpj: person.cnpj,
+                        state: person.state,
+                        cep: person.cep,
+                        country: person.country,
+                        vacancy: person.vacancies,
+                        skills: skillDTO)
+            })
+
+            return list
         }
+        else {
+            candidates = candidatesRepository.findAll()
+
+            list = candidates.forEach(person->{
+                List<SkillDTO> skillDTO = new ArrayList<>()
+                return  new PersonDTO(
+                        type: 'candidate',
+                        id: person.id,
+                        email: person.email,
+                        name: person.name,
+                        surName: person.surName,
+                        state: person.state,
+                        cep: person.cep,
+                        country: person.country,
+                        birthdate: person.birthdate,
+                        cpf: person.cpf,
+                        skills: SkillDTO
+                )
+            })
+
+            return list
+        }
+
+        return list
     }
+
 }

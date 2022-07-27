@@ -18,6 +18,12 @@
                             <option value="GITHUB">github</option>
                             <option value="HIBERNATE">Hibernate</option>
                         </select>
+                        <select name="add-level" id="level-skills-select" [(ngModel)]="level" >
+                            <option value="NONE" selected>None</option>
+                            <option value="BASIC" >Basic</option>
+                            <option value="MEDIUM" >Medium</option>
+                            <option value="EXPERT" >Expert</option>
+                        </select>
                         <div class="add-button">
                             <!--<fa-icon [icon]="fcp"></fa-icon>-->
                             <button  class="add-button" (click)="addSkillOnList()">+</button>

@@ -1,6 +1,6 @@
 package com.quartz.linketinderspring.rest.dtos
 
-import com.quartz.linketinderspring.domain.entity.Person
+
 import com.quartz.linketinderspring.domain.entity.Vacancy
 import groovy.transform.ToString
 
@@ -48,7 +48,7 @@ class PersonDTO {
     String cep
     String state
     String description
-    List<String> skills
+    List<SkillDTO> skills
     List<Vacancy> vacancy
     List<PersonDTO> approval
     List<PersonDTO> disapproval

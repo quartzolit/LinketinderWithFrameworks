@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.RequestParam
+import org.springframework.web.bind.annotation.ResponseBody
 import org.springframework.web.bind.annotation.ResponseStatus
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.server.ResponseStatusException
@@ -44,11 +46,22 @@ class PersonController {
 
     @PostMapping("/login")
     @ResponseStatus(OK)
+    @ResponseBody
     @CrossOrigin(origins = "http://localhost:4200")
     Optional<PersonDTO> receiveLogin(@RequestBody @Valid LoginDTO dto){
-
         Optional<PersonDTO> userDto = service.getPersonByEmailAndPassword(dto)
 
         return userDto
+    }
+
+    @GetMapping
+    @ResponseStatus(OK)
+    @ResponseBody
+    @CrossOrigin(origins = "http://localhost:4200")
+    List<PersonDTO> getAllData(@RequestParam String type){
+
+        List<PersonDTO> list = service.getDataByType(type)
+
+        return list
     }
 }

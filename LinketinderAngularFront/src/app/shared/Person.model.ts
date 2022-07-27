@@ -1,3 +1,4 @@
+import { Skill } from "./Skill.model";
 import { Vacancy } from "./Vacancy.model";
 
 export class Person{
@@ -16,7 +17,7 @@ export class Person{
     cep: string;
     state: string;
     description: string;
-    skills?: string[];
+    skills?: Skill[];
     vacancy?: Vacancy[];
     approval?: Person[];
     disapproval?: Person[];
